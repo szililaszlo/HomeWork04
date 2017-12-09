@@ -174,4 +174,20 @@ public class UserRegistry {
         }
 
     }
+
+    //3
+    //ez a metódus összeszámolja egy User tipusú tömb nem null értékű elemeit
+    public int countUser(User [] users) {
+        //változó mely egyel nő ha van nem null elem
+        int counter = 0;
+        for (int i = 0; i < users.length; i++) {
+
+            //inkrementálás
+            if (users[i] != null) {
+                counter++;
+            }
+        }
+        //visszatérési érték
+        return counter;
+    }
 }
