@@ -123,6 +123,7 @@ public class UserRegistry {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give me an ID: ");
         int inputid = scanner.nextInt();
+        //segéd változó
         boolean isExist = false;
 
         for (int i = 0; i < users.length; i++) {
@@ -133,20 +134,20 @@ public class UserRegistry {
                 String firstName = scanner1.nextLine();
                 System.out.println("lastname: ");
                 String lastname = scanner1.nextLine();
-                System.out.println("password: ");
-                String password = scanner1.nextLine();
-                System.out.println("age: ");
-                int age = scanner.nextInt();
 
 
                 users[i].setFirstName(firstName);
                 users[i].setLastname(lastname);
-                users[i].setPassword(password);
-                users[i].setAge(age);
+                //a véletlen jelszót az User class generateRandomPassword metódusea végzi,
+                // amley meghívható az user tömb bármely elemére, hisz mind User tipusúak
+                //paraméter egy szám mely a kód hosszát adja meg
+                users[i].setPassword(users[i].generatePassword(6));
 
+                isExist = true;
                 break;
             }
         }
+        //ha nem található akkor azt a isExist változó jelzi
         if (!isExist) {
             System.out.println("Nincs ilyen id-val rendelkező user!");
         }
