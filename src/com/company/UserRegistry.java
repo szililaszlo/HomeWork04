@@ -153,7 +153,7 @@ public class UserRegistry {
 
     }
 
-    //Egy ID bekérés után lehetőség van a megadott ID-hez tartozó user törlésére
+    //Egy ID bekérés után lehetőség van a megadott ID-hez tartozó user  törlésére
     private void deleteUser() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give me an ID: ");
@@ -169,7 +169,7 @@ public class UserRegistry {
             }
         }
         if (!isExist) {
-            System.out.println("Nincs ilyen id-val rendelkező user!");
+            System.out.println("Nincs ilyen id-val rendelkező user! ");
         }
 
     }
