@@ -6,7 +6,6 @@ public class Main {
 
         //UserRegistry típusú userregistry pédányosítása
         UserRegistry userRegistry = new UserRegistry();
-        //userRegistry.printMenu();
 
         //userregistry példány run metódusának meghívása
         userRegistry.run();
